@@ -8,6 +8,7 @@ const PROMO_CODES: Record<string, number> = {
 interface CartContextValue {
     cart: CartEntry[];
     addToCart: (item: MenuItem) => void;
+    addToCartQty: (item: MenuItem, qty: number) => void;
     updateQty: (id: number, delta: number) => void;
     removeFromCart: (id: number) => void;
     clearCart: () => void;
@@ -59,6 +60,18 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         });
     }, [showToast]);
 
+    const addToCartQty = useCallback((item: MenuItem, qty: number) => {
+        setCart(prev => {
+            const existing = prev.find(e => e.item.id === item.id);
+            if (existing) {
+                showToast(`+${qty} ${item.name}`, 'info');
+                return prev.map(e => e.item.id === item.id ? { ...e, qty: e.qty + qty } : e);
+            }
+            showToast(`🌿 ${item.name} ×${qty} ajouté !`, 'success');
+            return [...prev, { item, qty }];
+        });
+    }, [showToast]);
+
     const updateQty = useCallback((id: number, delta: number) => {
         setCart(prev => {
             const updated = prev.map(e => e.item.id === id ? { ...e, qty: e.qty + delta } : e);
@@ -102,7 +115,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
     return (
         <CartContext.Provider value={{
-            cart, addToCart, updateQty, removeFromCart, clearCart,
+            cart, addToCart, addToCartQty, updateQty, removeFromCart, clearCart,
             totalQty, totalPrice, discountedPrice,
             promoCode, promoDiscount, promoError, applyPromo, removePromo,
             toasts, dismissToast,

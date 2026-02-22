@@ -1,15 +1,19 @@
 import { ArrowRight } from 'lucide-react';
 
+function smoothScrollTo(id: string) {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 export default function Hero() {
     return (
         <section id="hero" className="reveal-on-scroll px-2 pt-24">
-            <div className="rounded-[2.5rem] relative h-[500px] bg-white group overflow-hidden shadow-[6px_6px_15px_rgba(4, 50, 34,0.4),-6px_-6px_15px_rgba(255,255,255,0.8)] border border-white/60">
+            <div className="rounded-[2.5rem] relative h-[500px] bg-white group overflow-hidden shadow-[6px_6px_15px_rgba(4,50,34,0.4),-6px_-6px_15px_rgba(255,255,255,0.8)] border border-white/60">
                 {/* Main large image */}
                 <div className="absolute inset-x-4 top-4 bottom-24 rounded-[2rem] overflow-hidden bg-white/40">
                     <img
                         src="/aina-hero.PNG"
-                        alt="Ena's Kitchen Chef"
-                        className="w-full h-full object-cover"
+                        alt="Chef Aïna - Ena's Kitchen"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                 </div>
 
@@ -23,16 +27,17 @@ export default function Hero() {
                             KITCHEN
                         </span>
                         <span className="font-inter text-[9px] tracking-[0.4em] text-[#043222] mt-2 font-bold uppercase">
-                            Crafted with love
+                            Made with love
                         </span>
                     </div>
 
-                    <a
-                        href="#menu"
-                        className="inline-flex items-center justify-center gap-2 bg-[#043222] text-white px-8 py-3 rounded-full font-inter font-bold text-sm shadow-[4px_4px_10px_rgba(4, 50, 34,0.3)] transition-all hover:bg-[#043222] active:scale-95"
+                    <button
+                        onClick={() => smoothScrollTo('menu')}
+                        className="inline-flex items-center justify-center gap-2 bg-[#043222] text-white px-8 py-3 rounded-full font-inter font-bold text-sm shadow-[4px_4px_10px_rgba(4,50,34,0.3)] transition-all hover:shadow-[6px_6px_15px_rgba(4,50,34,0.5)] hover:scale-105 active:scale-95 group/btn"
                     >
-                        Order Now <ArrowRight size={16} />
-                    </a>
+                        Commander
+                        <ArrowRight size={16} className="transition-transform duration-300 group-hover/btn:translate-x-1" />
+                    </button>
                 </div>
             </div>
         </section>

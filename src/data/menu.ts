@@ -157,10 +157,10 @@ export const menuItems: MenuItem[] = [
 ];
 
 export const galleryItems = [
-    { image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800', label: 'Entrée Fraîcheur' },
-    { image: 'https://images.unsplash.com/photo-1551024601-8f1ea4a6d6d8?w=800', label: 'Verrine Sucrée' },
-    { image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800', label: 'Fruits de Mer' },
-    { image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800', label: 'Mignardise' },
-    { image: 'https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=800', label: 'Snacking Premium' },
-    { image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800', label: 'Dessert Signature' },
+    { image: '/buche.PNG', label: 'Bûche' },
+    { image: '/choux.PNG', label: 'Choux' },
+    { image: '/foretnoire.PNG', label: 'Forêt Noire' },
+    { image: '/Gateau.PNG', label: 'Gâteau' },
+    { image: '/gateau-polenta.PNG', label: 'Gâteau Polenta' },
+    { image: '/miniburger.PNG', label: 'Mini Burger' },
 ];

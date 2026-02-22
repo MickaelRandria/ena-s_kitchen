@@ -33,9 +33,10 @@ export default function About() {
             <div className="pt-2 flex justify-center">
                 <a
                     href="#menu"
-                    className="group inline-flex items-center gap-3 bg-white px-6 border-white py-3 rounded-full text-[#043222] font-inter text-xs font-bold uppercase tracking-widest shadow-[2px_2px_5px_rgba(4, 50, 34,0.3),-2px_-2px_5px_rgba(255,255,255,0.8)] border border-white/60 transition-all active:scale-95"
+                    className="group inline-flex items-center gap-3 bg-white px-6 border-white py-3 rounded-full text-[#043222] font-inter text-xs font-bold uppercase tracking-widest shadow-[2px_2px_5px_rgba(4,50,34,0.3),-2px_-2px_5px_rgba(255,255,255,0.8)] border border-white/60 transition-all active:scale-95 hover:scale-105"
                 >
-                    Notre philosophie <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+                    Notre philosophie
+                    <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                 </a>
             </div>
         </div>

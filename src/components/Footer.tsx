@@ -1,4 +1,4 @@
-import { Instagram, Mail, Phone } from 'lucide-react';
+import { Instagram, Phone } from 'lucide-react';
 
 export default function Footer() {
     return (
@@ -19,17 +19,14 @@ export default function Footer() {
                             </span>
                         </div>
                         <p className="font-inter text-xs text-[#043222]/60 leading-relaxed max-w-xs mx-auto">
-                            Artisanal moments crafted with love and seasonal products. A unique gourmet experience.
+                            Des créations artisanales faites avec amour et des produits de saison. Une expérience gastronomique unique.
                         </p>
                         <div className="flex items-center justify-center gap-4 py-4">
-                            <a href="#" className="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-white/60 shadow-[4px_4px_10px_rgba(4, 50, 34,0.3),-4px_-4px_10px_rgba(255,255,255,0.8)] hover:scale-105 active:scale-95 transition-all text-[#043222]">
+                            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-white/60 shadow-[4px_4px_10px_rgba(4,50,34,0.3),-4px_-4px_10px_rgba(255,255,255,0.8)] hover:scale-105 active:scale-95 transition-all text-[#043222]">
                                 <Instagram size={20} />
                             </a>
-                            <a href="#" className="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-white/60 shadow-[4px_4px_10px_rgba(4, 50, 34,0.3),-4px_-4px_10px_rgba(255,255,255,0.8)] hover:scale-105 active:scale-95 transition-all text-[#043222]">
+                            <a href="https://wa.me/33617960640" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-white/60 shadow-[4px_4px_10px_rgba(4,50,34,0.3),-4px_-4px_10px_rgba(255,255,255,0.8)] hover:scale-105 active:scale-95 transition-all text-[#043222]">
                                 <Phone size={20} />
-                            </a>
-                            <a href="#" className="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-white/60 shadow-[4px_4px_10px_rgba(4, 50, 34,0.3),-4px_-4px_10px_rgba(255,255,255,0.8)] hover:scale-105 active:scale-95 transition-all text-[#043222]">
-                                <Mail size={20} />
                             </a>
                         </div>
                     </div>
@@ -37,19 +34,19 @@ export default function Footer() {
                     {/* Links Grid */}
                     <div className="grid grid-cols-2 gap-4 text-center">
                         <div className="space-y-3 bg-white p-4 rounded-3xl shadow-inner border border-white/30">
-                            <p className="font-inter text-[9px] uppercase tracking-widest text-[#043222]/50 font-bold">Explore</p>
+                            <p className="font-inter text-[9px] uppercase tracking-widest text-[#043222]/50 font-bold">Explorer</p>
                             <ul className="space-y-2">
-                                {['Menu', 'Gallery', 'Story'].map(item => (
-                                    <li key={item}>
-                                        <a href="#" className="font-inter text-xs font-bold text-[#043222] hover:text-[#043222] transition-colors">{item}</a>
+                                {[['La Carte', 'menu'], ['Galerie', 'gallery'], ['Notre histoire', 'about']].map(([label, id]) => (
+                                    <li key={id}>
+                                        <a href={`#${id}`} className="font-inter text-xs font-bold text-[#043222] hover:text-[#043222] transition-colors">{label}</a>
                                     </li>
                                 ))}
                             </ul>
                         </div>
                         <div className="space-y-3 bg-white p-4 rounded-3xl shadow-inner border border-white/30">
-                            <p className="font-inter text-[9px] uppercase tracking-widest text-[#043222]/50 font-bold">Info</p>
+                            <p className="font-inter text-[9px] uppercase tracking-widest text-[#043222]/50 font-bold">Infos</p>
                             <ul className="space-y-2">
-                                {['Delivery', 'Terms', 'Privacy'].map(item => (
+                                {['Livraison', 'Conditions', 'Confidentialité'].map(item => (
                                     <li key={item}>
                                         <a href="#" className="font-inter text-xs font-bold text-[#043222] hover:text-[#043222] transition-colors">{item}</a>
                                     </li>

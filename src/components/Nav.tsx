@@ -27,13 +27,13 @@ export default function Nav() {
 
                 {/* Links - Desktop */}
                 <div className="hidden md:flex items-center gap-10">
-                    {['Menu', 'Gallery', 'About'].map((item) => (
+                    {[['menu', 'La Carte'], ['gallery', 'Galerie'], ['about', 'Aïna']].map(([id, label]) => (
                         <a
-                            key={item}
-                            href={`#${item.toLowerCase()}`}
+                            key={id}
+                            href={`#${id}`}
                             className={`font-inter text-xs uppercase tracking-widest font-semibold hover:text-ena-accent transition-colors ${scrolled ? 'text-black/60' : 'text-ena-green/70'}`}
                         >
-                            {item}
+                            {label}
                         </a>
                     ))}
                 </div>

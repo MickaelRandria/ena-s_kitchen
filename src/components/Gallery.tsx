@@ -8,8 +8,8 @@ export default function Gallery() {
     return (
         <div id="gallery" className="rounded-[2.5rem] bg-white/40 p-6 space-y-6 reveal-on-scroll border border-white/60 shadow-[4px_4px_10px_rgba(4, 50, 34,0.3),-4px_-4px_10px_rgba(255,255,255,0.8)] mx-2">
             <div className="text-center space-y-1">
-                <h2 className="text-3xl font-cormorant text-[#043222]">Gallery</h2>
-                <p className="font-inter text-xs text-[#043222] uppercase tracking-widest font-bold">Moments of Joy</p>
+                <h2 className="text-3xl font-cormorant text-[#043222]">Galerie</h2>
+                <p className="font-inter text-xs text-[#043222] uppercase tracking-widest font-bold">Les créations d'Aïna</p>
             </div>
 
             <div className="grid grid-cols-2 gap-3 overflow-y-auto max-h-[500px] scrollbar-hide pr-2">

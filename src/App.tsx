@@ -4,6 +4,7 @@ import Nav from './components/Nav';
 import Hero from './components/Hero';
 import Stats from './components/Stats';
 import Menu from './components/Menu';
+import HowItWorks from './components/HowItWorks';
 import Gallery from './components/Gallery';
 import About from './components/About';
 import CTA from './components/CTA';
@@ -63,6 +64,7 @@ export default function App() {
           <main className="flex-1 overflow-y-auto px-4 pb-32 space-y-6 sheet-scroll">
             <Hero />
             <Stats />
+            <HowItWorks />
             <Menu />
             <About />
             <Gallery />
